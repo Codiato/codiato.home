@@ -7,17 +7,32 @@ namespace Codiato.Home.WebUI.Models.Repositories
 {
     public class PostRepository : IRepository<Post, long>
     {
-        private HomeContext _db;
+        private HomeContext _db = HomeContext.Current;
+        #region Singleton
+        private static PostRepository member;
+        private static object locker = new object();
 
-        public PostRepository()
+        private PostRepository()
         {
-            _db = HomeContext.Current;
         }
 
-        public PostRepository(HomeContext db)
+        static PostRepository()
         {
-            _db = db;
+              lock (locker)
+              {
+                  PostRepository.member = new PostRepository();
+              }
         }
+        public static PostRepository Current
+        {
+            get
+            {
+                return PostRepository.member;
+            }
+
+        }
+        #endregion
+
 
         public IQueryable<Post> ListAll()
         {
