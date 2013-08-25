@@ -2,6 +2,7 @@
 using Codiato.Home.WebUI.Models.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,6 +40,41 @@ namespace Codiato.Home.WebUI.Controllers
             PostRepository.Current.Save();
 
             return View("Poster");
+        }
+
+        public ActionResult Upload(HttpPostedFileBase upload, string CKEditorFuncNum, string CKEditor, string langCode)
+        {
+            string fileName = upload.FileName;
+
+            string basePath = Server.MapPath("~/Content/uploads");
+            upload.SaveAs(basePath + "\\" + fileName);
+
+            return Content("آپلود با موفقیت انجام شد.");
+        }
+
+        public ActionResult Browse(string CKEditorFuncNum)
+        {
+            List<FileInformation> fileInfoList = GetCurrentFiles();
+
+            var model = new FileListingViewModel
+            {
+                Files = fileInfoList,
+                CKEditorFuncNum = CKEditorFuncNum
+            };
+
+            return View(model);
+        }
+
+        private List<FileInformation> GetCurrentFiles()
+        {
+            string basePath = Server.MapPath("~/Content/uploads");
+            List<FileInformation> fileInfoList = new List<FileInformation>();
+            string[] files = Directory.GetFiles(basePath);
+            files.ToList().ForEach(file =>
+            {
+                fileInfoList.Add(new FileInformation { FileName = Path.GetFileName(file) });
+            });
+            return fileInfoList;
         }
     }
 }

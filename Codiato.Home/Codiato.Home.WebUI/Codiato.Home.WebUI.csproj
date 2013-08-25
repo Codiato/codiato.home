@@ -121,6 +121,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CKEditorModels.cs" />
     <Compile Include="Models\HomeContext.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Repositories\IRepository.cs" />
@@ -635,6 +636,7 @@
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Views\Panel\Poster.aspx" />
+    <Content Include="Views\Shared\Browse.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -652,6 +654,7 @@
     <Content Include="Views\Shared\Panel.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\uploads\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
