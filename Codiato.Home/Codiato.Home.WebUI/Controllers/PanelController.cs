@@ -24,6 +24,7 @@ namespace Codiato.Home.WebUI.Controllers
             p.Content = body;
             p.PublishDate = DateTime.UtcNow;
             p.StaticLink = link;
+            p.Tags = new List<Tag>();
 
             foreach (var tag in tags.Split(','))
             {
@@ -33,6 +34,9 @@ namespace Codiato.Home.WebUI.Controllers
 
                 p.Tags.Add(t);
             }
+
+            PostRepository.Current.Add(p);
+            PostRepository.Current.Save();
 
             return View("Poster");
         }

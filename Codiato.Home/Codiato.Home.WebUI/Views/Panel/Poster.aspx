@@ -6,8 +6,24 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>پست کننده</h2>
+    <h2>پست کننده</h2>
 
-    <%: Html.TextArea("content", new { @class = "ckeditor"})%>
+    <% using (Html.BeginForm("CreatePost", "Panel")) { %>
+        <fieldset>
+            <legend>مشخصات پست جدید بلاگ</legend>
+        <label>عنوان</label>
+            <%: Html.TextBox("title") %>
+            <label>متن پست</label>
+            <%: Html.TextArea("body", new { @class = "ckeditor"})%>
+            <label>تگ های پست</label>
+            <%: Html.TextBox("tags") %>
+            <label>لینک ثابت</label>
+            <%: Html.TextBox("link") %>
+            <span class="help-block">این لینک ثابتی است که فلان فلان</span>
+            <p>
+                <button type="submit" class="btn">ارسال پست</button>
+            </p>
+        </fieldset>
+    <%} %>
 
 </asp:Content>

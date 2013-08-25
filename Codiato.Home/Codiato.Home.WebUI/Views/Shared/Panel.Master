@@ -3,16 +3,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        Codiato - <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    <title>Codiato -
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
     <link href="<%: Url.Content("~/Content/bootstrap.css") %>" rel="stylesheet" type="text/css" />
-    <link href="<%: Url.Content("~/Content/panel.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%: Url.Content("~/Content/panel.css") %>" rel="stylesheet" type="text/css" />
     <script src="<%: Url.Content("~/Content/ckeditor/ckeditor.js") %>" type="text/javascript"></script>
 </head>
 <body>
-    <section>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-    </section>    
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">
+                    <img src="<%: Url.Content("~/content/images/logo.png") %>" width="150px" /></a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ارتباط با راننده ها
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">ثبت و ویرایش راننده</a></li>
+                                <li><a href="#">ارسال پیام</a></li>
+                                <li><a href="#">ارسال اعلامیه</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">وسایل نقلیه
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">ثبت و ویرایش</a></li>
+                                <li><a href="#">مشاهده وضعیت</a></li>
+                                <li><a href="#">برنامه ریزی تعمیرات</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">برنامه‌ریزی ارسال</a>
+                        </li>
+                        <li class="active">
+                            <a href="#"><i class="icon-home"></i>خانه</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="main-content">
+        <div class="row">
+            <div class="span9">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="span3">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; این نرم افزار در شرکت چابک توسعه نوین طرح پیاده سازی شده است.</p>
+        </div>
+    </footer>
 </body>
 </html>

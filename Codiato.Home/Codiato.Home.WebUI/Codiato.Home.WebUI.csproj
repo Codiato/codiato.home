@@ -516,6 +516,7 @@
     <Content Include="Content\ckeditor\styles.js" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\panel.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Global.asax" />
