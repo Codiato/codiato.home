@@ -13,6 +13,22 @@ namespace Codiato.Home.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            #region Control Panel Urls
+            
+            routes.MapRoute(
+                name: "Poster",
+                url: "a/post",
+                defaults: new { controller = "Panel", action = "CreatePost" }
+            );
+
+            routes.MapRoute(
+                name: "Deleter",
+                url: "a/delete/{id}",
+                defaults: new { controller = "Panel", action = "DeletePost" }
+            );
+
+            #endregion
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

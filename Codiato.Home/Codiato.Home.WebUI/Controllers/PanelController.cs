@@ -42,6 +42,21 @@ namespace Codiato.Home.WebUI.Controllers
             return View("Poster");
         }
 
+        [HttpPost]        
+        public ActionResult DeletePost(long id)
+        {
+            Post p = PostRepository.Current.Find(id);
+            if (p == null)
+                return HttpNotFound();
+
+            PostRepository.Current.Delete(p);
+            PostRepository.Current.Save();
+
+            return Content("Done O.O");
+        }
+			
+
+        #region CKEditor
         public ActionResult Upload(HttpPostedFileBase upload, string CKEditorFuncNum, string CKEditor, string langCode)
         {
             string fileName = upload.FileName;
@@ -76,5 +91,6 @@ namespace Codiato.Home.WebUI.Controllers
             });
             return fileInfoList;
         }
+        #endregion
     }
 }

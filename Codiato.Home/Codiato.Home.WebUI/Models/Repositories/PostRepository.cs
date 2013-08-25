@@ -51,7 +51,7 @@ namespace Codiato.Home.WebUI.Models.Repositories
 
         public void Delete(Post o)
         {
-            o.Tags.RemoveAll(m => true);
+            //o.Tags.RemoveAll(m => true);
             _db.Posts.Remove(o);
         }
 
