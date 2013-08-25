@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codiato.Home.WebUI", "Codiato.Home.WebUI\Codiato.Home.WebUI.csproj", "{780047A8-B0A3-436B-B0FF-85F370AEC5F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codiato.Home.Tests", "Codiato.Home.Tests\Codiato.Home.Tests.csproj", "{DE7EE252-EF66-4DE3-943D-7E5AE3BCC655}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -17,6 +19,10 @@ Global
 		{780047A8-B0A3-436B-B0FF-85F370AEC5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{780047A8-B0A3-436B-B0FF-85F370AEC5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{780047A8-B0A3-436B-B0FF-85F370AEC5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7EE252-EF66-4DE3-943D-7E5AE3BCC655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7EE252-EF66-4DE3-943D-7E5AE3BCC655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7EE252-EF66-4DE3-943D-7E5AE3BCC655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7EE252-EF66-4DE3-943D-7E5AE3BCC655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
