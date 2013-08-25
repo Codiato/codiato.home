@@ -8,12 +8,11 @@ using System.Web.Mvc;
 
 namespace Codiato.Home.WebUI.Controllers
 {
-    [Authorize]
     public class PanelController : Controller
     {
         public ActionResult CreatePost()
         {
-            return View();
+            return View("Poster");
         }
 
         [HttpPost]
@@ -35,7 +34,7 @@ namespace Codiato.Home.WebUI.Controllers
                 p.Tags.Add(t);
             }
 
-            return View();
+            return View("Poster");
         }
     }
 }

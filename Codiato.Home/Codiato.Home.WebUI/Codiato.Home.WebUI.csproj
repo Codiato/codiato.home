@@ -294,6 +294,7 @@
     <Content Include="Content\bootstrap-assets\less\tests\navbar-fixed-top.html" />
     <Content Include="Content\bootstrap-assets\less\tests\navbar-static-top.html" />
     <Content Include="Content\bootstrap-assets\less\tests\navbar.html" />
+    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\ckeditor\adapters\jquery.js" />
     <Content Include="Content\ckeditor\build-config.js" />
     <Content Include="Content\ckeditor\ckeditor.js" />
@@ -513,6 +514,10 @@
     <Content Include="Content\ckeditor\skins\moono\images\lock.png" />
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\styles.js" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\panel.css" />
+    <Content Include="Content\responsive.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\ckeditor\plugins\scayt\LICENSE.md" />
     <Content Include="Content\ckeditor\plugins\scayt\README.md" />
@@ -613,9 +618,22 @@
     <Content Include="Content\bootstrap-assets\package.json" />
     <Content Include="Content\bootstrap-assets\README.md" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\bootstrap-affix.js" />
+    <Content Include="Scripts\bootstrap-alert.js" />
+    <Content Include="Scripts\bootstrap-button.js" />
+    <Content Include="Scripts\bootstrap-carousel.js" />
+    <Content Include="Scripts\bootstrap-collapse.js" />
+    <Content Include="Scripts\bootstrap-dropdown.js" />
+    <Content Include="Scripts\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap-popover.js" />
+    <Content Include="Scripts\bootstrap-scrollspy.js" />
+    <Content Include="Scripts\bootstrap-tab.js" />
+    <Content Include="Scripts\bootstrap-tooltip.js" />
+    <Content Include="Scripts\bootstrap-transition.js" />
+    <Content Include="Scripts\bootstrap-typeahead.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
-    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Panel\Poster.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -630,9 +648,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\Panel.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
