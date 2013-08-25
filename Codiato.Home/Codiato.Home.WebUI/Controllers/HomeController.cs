@@ -12,16 +12,8 @@ namespace Codiato.Home.WebUI.Controllers
     {
         public ActionResult Index()
         {
-            using (Codiato.Home.WebUI.Models.HomeContext ctx = new Models.HomeContext())
-            {
-                Codiato.Home.WebUI.Models.Tag t = new Models.Tag();
-                t.TagName = "firt-tag";
-
-                ctx.Tags.Add(t);
-                ctx.SaveChanges();
-            }
-
-            return Content("Salam");
-        }			
+            return Content("Codiato is in place");
+        }
+			
     }
 }
