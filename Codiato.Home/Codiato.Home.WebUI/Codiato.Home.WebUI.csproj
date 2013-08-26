@@ -638,6 +638,7 @@
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Views\Blog\Index.aspx" />
+    <Content Include="Views\Blog\RecentPost.ascx" />
     <Content Include="Views\Panel\Poster.aspx" />
     <Content Include="Views\Shared\Browse.aspx" />
     <Content Include="Web.config" />
