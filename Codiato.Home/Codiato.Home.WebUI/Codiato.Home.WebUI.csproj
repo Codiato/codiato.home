@@ -118,7 +118,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PanelController.cs" />
+    <Compile Include="Controllers\BlogPanelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
