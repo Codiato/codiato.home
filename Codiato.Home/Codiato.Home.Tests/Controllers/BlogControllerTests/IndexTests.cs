@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Codiato.Home.Tests.Controllers.BlogController
+namespace Codiato.Home.Tests.Controllers.BlogControllerTests
 {
     [TestClass]
     public class IndexTests
@@ -13,7 +13,7 @@ namespace Codiato.Home.Tests.Controllers.BlogController
         public void Index_Viewbag_Values_Are_Correct()
         {
             // Arrange
-
+            BlogController
             // Act
 
             // Assert
