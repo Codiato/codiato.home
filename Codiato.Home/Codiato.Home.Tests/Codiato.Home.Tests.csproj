@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Controllers\BlogControllerTests\ArchiveTests.cs" />
     <Compile Include="Controllers\BlogControllerTests\IndexTests.cs" />
+    <Compile Include="Controllers\BlogPanelControllerTests\CreatePostTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,9 +79,7 @@
       <Name>Codiato.Home.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\BlogPanelControllerTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
