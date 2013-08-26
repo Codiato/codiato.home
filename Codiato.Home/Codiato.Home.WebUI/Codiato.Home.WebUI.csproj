@@ -637,6 +637,7 @@
     <Content Include="Scripts\bootstrap-typeahead.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Views\Blog\Archive.aspx" />
     <Content Include="Views\Blog\Index.aspx" />
     <Content Include="Views\Blog\LatestPostSummary.ascx" />
     <Content Include="Views\Panel\Poster.aspx" />
