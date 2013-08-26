@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Codiato.Home.WebUI.Controllers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Codiato.Home.Tests.Controllers.BlogControllerTests
         public void Index_Viewbag_Values_Are_Correct()
         {
             // Arrange
-            BlogController
+            BlogController cut = new BlogController();
             // Act
 
             // Assert
