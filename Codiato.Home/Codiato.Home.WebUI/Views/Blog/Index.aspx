@@ -6,6 +6,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<% Html.RenderPartial("LatestPostSummary", (Codiato.Home.WebUI.Models.Post)ViewBag.LatestBlogPost); %>
+<% foreach (Codiato.Home.WebUI.Models.Post post in Model) { %>
+    <% Html.RenderPartial("SinglePost", post); %>
+<%} %>
 
 </asp:Content>

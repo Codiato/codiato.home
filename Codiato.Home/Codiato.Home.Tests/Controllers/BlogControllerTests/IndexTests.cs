@@ -20,7 +20,6 @@ namespace Codiato.Home.Tests.Controllers.BlogControllerTests
         public void InitTest()
         {
             _postRepository = MockRepository.GenerateMock<IPostRepository>();
-            _postRepository.Stub(pr => pr.LatestPost()).Return(new Post());
             _postRepository.Stub(pr => pr.RecentPosts(10)).IgnoreArguments()
                 .Return(new List<Post>().AsQueryable());
         }
@@ -34,9 +33,7 @@ namespace Codiato.Home.Tests.Controllers.BlogControllerTests
             var result = cut.Index() as ViewResult;
             // Assert
             _postRepository.AssertWasCalled(pr => pr.RecentPosts(10));
-            _postRepository.AssertWasCalled(pr => pr.LatestPost());
-            Assert.IsNotNull(result.ViewBag.LatestBlogPost);
-            Assert.IsNotNull(result.ViewBag.RecentPosts);
+            Assert.IsNotNull(result.Model);
         }
 			
     }

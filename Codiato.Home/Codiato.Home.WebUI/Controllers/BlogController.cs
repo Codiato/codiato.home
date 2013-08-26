@@ -24,10 +24,7 @@ namespace Codiato.Home.WebUI.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.LatestBlogPost = _postRepository.LatestPost();
-            ViewBag.RecentPosts = _postRepository.RecentPosts(10);
-
-            return View();
+            return View(_postRepository.RecentPosts(10));
         }
 
         public ActionResult Archive(string urlKey)

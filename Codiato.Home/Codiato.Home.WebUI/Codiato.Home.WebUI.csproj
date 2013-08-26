@@ -517,9 +517,13 @@
     <Content Include="Content\ckeditor\skins\moono\images\lock.png" />
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\styles.js" />
+    <Content Include="Content\images\cal.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\logo-blog.png" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\pattern1.jpg" />
+    <Content Include="Content\images\pattern2.jpg" />
     <Content Include="Content\panel.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Global.asax" />
@@ -639,7 +643,7 @@
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Views\Blog\Archive.aspx" />
     <Content Include="Views\Blog\Index.aspx" />
-    <Content Include="Views\Blog\LatestPostSummary.ascx" />
+    <Content Include="Views\Blog\SinglePost.ascx" />
     <Content Include="Views\Panel\Poster.aspx" />
     <Content Include="Views\Shared\Browse.aspx" />
     <Content Include="Web.config" />

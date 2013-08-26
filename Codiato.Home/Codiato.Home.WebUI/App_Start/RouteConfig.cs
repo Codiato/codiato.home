@@ -18,13 +18,13 @@ namespace Codiato.Home.WebUI
             routes.MapRoute(
                 name: "Poster",
                 url: "a/post",
-                defaults: new { controller = "Panel", action = "CreatePost" }
+                defaults: new { controller = "BlogPanel", action = "CreatePost" }
             );
 
             routes.MapRoute(
                 name: "Deleter",
                 url: "a/delete/{id}",
-                defaults: new { controller = "Panel", action = "DeletePost" }
+                defaults: new { controller = "BlogPanel", action = "DeletePost" }
             );
 
             #endregion
