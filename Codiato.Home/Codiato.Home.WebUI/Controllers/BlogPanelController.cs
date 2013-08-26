@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace Codiato.Home.WebUI.Controllers
 {
-    public class PanelController : Controller
+    public class BlogPanelController : Controller
     {
         public ActionResult CreatePost()
         {
