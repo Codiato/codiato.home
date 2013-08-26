@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Codiato.Home.WebUI.Models.Repositories
 {
-    public class PostRepository : IRepository<Post, long>
+    public class PostRepository : IPostRepository
     {
         private HomeContext _db = HomeContext.Current;
         #region Singleton
@@ -58,6 +58,16 @@ namespace Codiato.Home.WebUI.Models.Repositories
         public void Save()
         {
             _db.SaveChanges();
+        }
+
+        public Post LatestPost()
+        {
+            return ListAll().OrderByDescending(p => p.PublishDate).FirstOrDefault();
+        }
+
+        public IQueryable<Post> RecentPosts(int count)
+        {
+            return ListAll().OrderByDescending(p => p.PublishDate).Take(count);
         }
     }
 }

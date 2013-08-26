@@ -10,6 +10,8 @@ namespace Codiato.Home.WebUI.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.LatestBlogPost = Codiato.Home.WebUI.Models.Repositories.PostRepository.Current.
+
             return View();
         }
     }

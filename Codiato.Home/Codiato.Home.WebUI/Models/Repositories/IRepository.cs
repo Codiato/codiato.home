@@ -15,4 +15,10 @@ namespace Codiato.Home.WebUI.Models.Repositories
 
         void Save();
     }
+
+    public interface IPostRepository : IRepository<Post, long>
+    {
+        Post LatestPost();
+        IQueryable<Post> RecentPosts(int count);
+    }
 }
