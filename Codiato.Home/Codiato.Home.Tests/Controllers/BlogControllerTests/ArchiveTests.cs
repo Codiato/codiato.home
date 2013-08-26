@@ -12,7 +12,7 @@ using System.Web.Mvc;
 namespace Codiato.Home.Tests.Controllers.BlogControllerTests
 {
     [TestClass]
-    public class IndexTests
+    public class ArchiveTests
     {
         private IPostRepository _postRepository;
 
@@ -20,24 +20,19 @@ namespace Codiato.Home.Tests.Controllers.BlogControllerTests
         public void InitTest()
         {
             _postRepository = MockRepository.GenerateMock<IPostRepository>();
-            _postRepository.Stub(pr => pr.LatestPost()).Return(new Post());
-            _postRepository.Stub(pr => pr.RecentPosts(10)).IgnoreArguments()
-                .Return(new List<Post>().AsQueryable());
+            _postRepository.Stub(pr => pr.Find("my_first_test")).Return(new Post());
         }
-        
+
         [TestMethod]
-        public void Viewbag_Values_Are_Correct_Index_BlogController()
+        public void Returns_Correct_Post_Archive_BlogController()
         {
             // Arrange
             BlogController cut = new BlogController(_postRepository);
             // Act
-            var result = cut.Index() as ViewResult;
+            var result = cut.Archive("my_first_test") as ViewResult;
             // Assert
-            _postRepository.AssertWasCalled(pr => pr.RecentPosts(10));
-            _postRepository.AssertWasCalled(pr => pr.LatestPost());
-            Assert.IsNotNull(result.ViewBag.LatestBlogPost);
-            Assert.IsNotNull(result.ViewBag.RecentPosts);
-        }
-			
+            Assert.IsNotNull(result.Model, "The Model in the result is null.");
+            _postRepository.AssertWasCalled(a => a.Find("my_first_test"));
+        }			
     }
 }

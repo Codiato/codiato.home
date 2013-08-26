@@ -44,6 +44,11 @@ namespace Codiato.Home.WebUI.Models.Repositories
             return ListAll().FirstOrDefault(p => p.PostId == key);
         }
 
+        public Post Find(string urlKey)
+        {
+            return ListAll().FirstOrDefault(p => p.StaticLink.ToLower() == urlKey.ToLower());
+        }
+
         public void Add(Post o)
         {
             _db.Posts.Add(o);

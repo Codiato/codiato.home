@@ -1,4 +1,5 @@
-﻿using Codiato.Home.WebUI.Models.Repositories;
+﻿using Codiato.Home.WebUI.Models;
+using Codiato.Home.WebUI.Models.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,15 @@ namespace Codiato.Home.WebUI.Controllers
 
             return View();
         }
+
+        public ActionResult Archive(string urlKey)
+        {
+            Post p = _postRepository.Find(urlKey);
+            if (p == null)
+                return HttpNotFound();
+
+            return View(p);
+        }
+			
     }
 }

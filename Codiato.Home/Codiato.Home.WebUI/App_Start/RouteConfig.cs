@@ -37,6 +37,12 @@ namespace Codiato.Home.WebUI
                 defaults: new { controller = "Blog", action = "Index" }
             );
 
+            routes.MapRoute(
+                name: "BlogSingle",
+                url: "blog/p/{urlKey}",
+                defaults: new { controller = "Blog", action = "Archive" }
+            );
+
             #endregion
 
             routes.MapRoute(

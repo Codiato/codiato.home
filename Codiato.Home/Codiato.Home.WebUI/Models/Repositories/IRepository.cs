@@ -18,6 +18,7 @@ namespace Codiato.Home.WebUI.Models.Repositories
 
     public interface IPostRepository : IRepository<Post, long>
     {
+        Post Find(string urlKey);
         Post LatestPost();
         IQueryable<Post> RecentPosts(int count);
     }

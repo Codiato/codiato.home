@@ -12,7 +12,7 @@ namespace Codiato.Home.WebUI.Controllers
     {
         public ActionResult Index()
         {
-            return Content("Codiato is in place");
+            return RedirectToAction("Index", "Blog");
         }
 			
     }
