@@ -6,6 +6,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-
+<% Html.RenderPartial("LatestPostSummary", (Codiato.Home.WebUI.Models.Post)ViewBag.LatestBlogPost); %>
 
 </asp:Content>
