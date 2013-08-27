@@ -19,6 +19,29 @@ h4 {
     font-size: 25px;
 }
 
+header{
+    margin-bottom: 40px;
+}
+
+header .container {
+    position: relative;
+    background: url('images/pattern2.jpg');
+    height: 150px;
+}
+
+header .container .blog-logo{
+    margin-top: 10px;
+}
+
+.cute-blue-codiato-colored-line{
+    height: 20px;
+    background: #0f99c1;
+    position: absolute;
+    width: 615px;
+    right: 0px;
+    top: 150px;
+}
+
 div.blog-post {
     background: url('images/codiato-block.jpg') top left no-repeat;
     margin-bottom: 15px;

@@ -10,7 +10,13 @@
     <link href="<%: Url.Content("~/Content/blog.css") %>" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="container" id="main-content">
+    <header>
+        <div class="container">
+            <img class="blog-logo" src="<%: Url.Content("~/content/images/logo-blog.jpg") %>" alt="Codiato" />
+            <div class="cute-blue-codiato-colored-line"></div>
+        </div>
+    </header>
+    <div class="container" id="main-content">        
         <div class="row">
             <div class="span12">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
