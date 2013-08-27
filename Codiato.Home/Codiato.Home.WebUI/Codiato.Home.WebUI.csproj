@@ -518,9 +518,14 @@
     <Content Include="Content\ckeditor\skins\moono\images\lock.png" />
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\styles.js" />
+    <Content Include="Content\images\apple-touch-icon-114.png" />
+    <Content Include="Content\images\apple-touch-icon-144.png" />
+    <Content Include="Content\images\apple-touch-icon-57.png" />
+    <Content Include="Content\images\apple-touch-icon-72.png" />
     <Content Include="Content\images\cal.png" />
     <Content Include="Content\images\codiato-block-gray.jpg" />
     <Content Include="Content\images\codiato-block.jpg" />
+    <Content Include="Content\images\coming-soon-codiato.png" />
     <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
@@ -530,6 +535,7 @@
     <Content Include="Content\images\pattern2.jpg" />
     <Content Include="Content\panel.css" />
     <Content Include="Content\responsive.css" />
+    <Content Include="Content\uc.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\ckeditor\plugins\scayt\LICENSE.md" />
     <Content Include="Content\ckeditor\plugins\scayt\README.md" />
@@ -652,6 +658,7 @@
     <Content Include="Views\Blog\Index.aspx" />
     <Content Include="Views\Blog\SinglePost.ascx" />
     <Content Include="Views\BlogPanel\Poster.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Browse.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
