@@ -23,13 +23,16 @@ namespace Codiato.Home.Tests.Controllers.BlogPanelControllerTests
         {
             posts = (new List<Post>() {
                 new Post("title", "content", "#", "J", DateTime.UtcNow),
-                new Post("title 2", "content z", "#", "M", DateTime.UtcNow.AddDays(2)),
+                new Post("title 2", "content z", "#", "M", DateTime.UtcNow.AddDays(2)){PostId = 2},
                 new Post("fan roosh", "content k", "#", "F", DateTime.UtcNow.AddDays(-1))
             }).AsQueryable();
             postRepository = MockRepository.GenerateStub<IPostRepository>();
 
             postRepository.Stub(x => x.RecentPosts(Arg<int>.Is.Anything))
                 .WhenCalled(x => x.ReturnValue = posts.Where(y => y.PublishDate <= DateTime.UtcNow).Take((int)x.Arguments[0]));
+            postRepository.Stub(x => x.Find(Arg<long>.Is.Anything))
+                .WhenCalled(x => x.ReturnValue = posts.FirstOrDefault(y => y.PostId == (long)x.Arguments[0]))
+                .Return(new Post());
         }
 
         internal static IPostRepository Instance()
