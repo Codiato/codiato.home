@@ -6,6 +6,7 @@
     <title>Codiato Blog -
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
+    <link rel="icon" type="image/png" href="<%: Url.Content("~/content/images/favicon.png") %>" />
     <link href="<%: Url.Content("~/Content/bootstrap.css") %>" rel="stylesheet" type="text/css" />
     <link href="<%: Url.Content("~/Content/blog.css") %>" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Lusitana:700' rel='stylesheet' type='text/css'>    

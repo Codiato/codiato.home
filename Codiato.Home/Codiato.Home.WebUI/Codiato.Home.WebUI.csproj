@@ -521,6 +521,7 @@
     <Content Include="Content\images\cal.png" />
     <Content Include="Content\images\codiato-block-gray.jpg" />
     <Content Include="Content\images\codiato-block.jpg" />
+    <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\logo-blog.jpg" />
