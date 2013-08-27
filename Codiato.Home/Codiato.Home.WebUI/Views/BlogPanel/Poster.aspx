@@ -1,27 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Panel.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    پست کننده
+    A page that posts
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>پست کننده</h2>
+    <h2>A page that posts</h2>
 
     <% using (Html.BeginForm("CreatePost", "BlogPanel")) { %>
         <fieldset>
-            <legend>مشخصات پست جدید بلاگ</legend>
-        <label>عنوان</label>
+            <legend>Blog post</legend>
+        <label>Title</label>
             <%: Html.TextBox("title") %>
-            <label>متن پست</label>
+            <label>Content</label>
             <%: Html.TextArea("body", new { @class = "ckeditor"})%>
-            <label>تگ های پست</label>
+            <label>tags</label>
             <%: Html.TextBox("tags") %>
-            <label>لینک ثابت</label>
-            <%: Html.TextBox("link") %>
-            <span class="help-block">این لینک ثابتی است که فلان فلان</span>
+            <label>Static link</label>
+            <%: Html.TextBox("link") %>            
             <p>
-                <button type="submit" class="btn">ارسال پست</button>
+                <button type="submit" class="btn">Send post</button>
             </p>
         </fieldset>
     <%} %>

@@ -27,6 +27,18 @@ namespace Codiato.Home.WebUI
                 defaults: new { controller = "BlogPanel", action = "DeletePost" }
             );
 
+            routes.MapRoute(
+                name: "Uploader",
+                url: "a/upload",
+                defaults: new { controller = "BlogPanel", action = "Upload" }
+            );
+
+            routes.MapRoute(
+                name: "Browser",
+                url: "a/browse",
+                defaults: new { controller = "BlogPanel", action = "Browse" }
+            );
+
             #endregion
 
             #region Blog

@@ -8,12 +8,20 @@
     </title>
     <link href="<%: Url.Content("~/Content/bootstrap.css") %>" rel="stylesheet" type="text/css" />
     <link href="<%: Url.Content("~/Content/blog.css") %>" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Lusitana:700' rel='stylesheet' type='text/css'>    
 </head>
 <body>
     <header>
         <div class="container">
             <img class="blog-logo" src="<%: Url.Content("~/content/images/logo-blog.jpg") %>" alt="Codiato" />
-            <div class="cute-blue-codiato-colored-line"></div>
+            <div id="cute-blue-codiato-colored-line">
+                <div id="blog-menu">
+                    <span class="first">Home</span>
+                    <span>About Us</span>
+                    <span>Team</span>
+                    <span>Contact Us</span>
+                </div>
+            </div>
         </div>
     </header>
     <div class="container" id="main-content">        
@@ -23,5 +31,7 @@
             </div>
         </div>
     </div>
+    <script src="<%: Url.Content("~/scripts/jquery-2.0.3.min.js") %>"></script>
+    <script src="<%: Url.Content("~/scripts/codiblog.js") %>"></script>
 </body>
 </html>

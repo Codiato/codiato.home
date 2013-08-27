@@ -29,17 +29,44 @@ header .container {
     height: 150px;
 }
 
-header .container .blog-logo{
-    margin-top: 10px;
+header .container img.blog-logo{
+    margin-top: 32px;
+    margin-left: 35px;
+    width: 255px;
 }
 
-.cute-blue-codiato-colored-line{
+#cute-blue-codiato-colored-line{
     height: 20px;
     background: #0f99c1;
     position: absolute;
-    width: 615px;
+    width: 600px;
     right: 0px;
-    top: 150px;
+    top: 150px;    
+}
+
+div#blog-menu{
+    font-weight: bold;
+    font-size: 12pt;
+    text-align: center;
+    display: none;
+    margin-top: 10px;
+}
+
+div#blog-menu span {
+    float: left;
+    list-style: none;
+    min-width: 100px;
+    cursor: pointer;    
+    margin-left: 60px;
+    color: #dfdfdf;
+}
+
+div#blog-menu span.first{
+    margin-left: 0px;
+}
+
+div#blog-menu span:hover{
+    color: #fff;
 }
 
 div.blog-post {
@@ -50,7 +77,8 @@ div.blog-post {
 div.blog-post h2
 {
     padding-left: 40px;    
-    padding-top: 25px;
+    padding-top: 25px;    
+    font-family: 'Lusitana', serif;
 }
 
 div.blog-post h2 a
@@ -71,9 +99,8 @@ div.blog-post div.post-content
     margin-left: 32px;
     margin-top: -28px;
     padding: 10px;
-    padding-top: 44px;
-    padding-left: 55px;
-    padding-bottom: 44px;
+    padding: 44px 55px 44px 55px;    
+    font-family: 'Open Sans', sans-serif;
 }
 
 div.blog-post div.post-date
@@ -119,14 +146,27 @@ div.blog-post div.post-footer {
     background: url('images/codiato-block-gray.jpg') top right no-repeat;
     height: 91px;
     width: 973px;
-    margin-top: -44px;    
+    margin-top: -55px;    
 }
 
-div.blog-post div.post-footer span.tag-box, div.blog-post div.post-footer span.comment-box{    
-    padding-left: 50px;
+div.blog-post div.post-footer span.comment-box {    
+    float: left;
+    margin-left: 88px;    
+    margin-top: 15px;
 }
 
-div.blog-post div.post-footer span.tag-box{
+div.blog-post div.post-footer span.comment-box a {
+    color: #58595B;
+}
+
+div.blog-post div.post-footer span.comment-box a:hover {
+    color: #0f99c1;
+}
+
+div.blog-post div.post-footer span.tag-box {
     font-style: italic;
     color: #0f99c1;
+    float: right;
+    margin-right: 90px;
+    margin-top: 15px;
 }

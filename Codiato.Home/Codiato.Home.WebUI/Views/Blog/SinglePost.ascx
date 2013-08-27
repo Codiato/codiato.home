@@ -12,7 +12,7 @@
             <%= Model.Content %>
         </div>
         <div class="post-footer">
-            <span class="comment-box"><a href="#">Leave a comment</a></span><span class="tag-box">Tags: <%: string.Join(",", Model.Tags.Select(t => t.TagName).ToArray()) %></span>
+            <%--<span class="comment-box"><a href="#">Leave a comment</a></span>--%><span class="tag-box">Tags: <%: string.Join(",", Model.Tags.Select(t => t.TagName).ToArray()) %></span>
         </div>
     </div>
 </article>
