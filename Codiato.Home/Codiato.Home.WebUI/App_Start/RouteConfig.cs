@@ -13,8 +13,22 @@ namespace Codiato.Home.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            #region Secure Urls
+            routes.MapRoute(
+                name: "Login",
+                url: "secure/login",
+                defaults: new { controller = "Account", action = "LogIn" }
+            );
+
+            routes.MapRoute(
+                name: "Logout",
+                url: "secure/logout",
+                defaults: new { controller = "Account", action = "LogOut" }
+            );
+            #endregion
+
             #region Control Panel Urls
-            
+
             routes.MapRoute(
                 name: "Poster",
                 url: "a/post",

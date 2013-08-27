@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Codiato.Home.WebUI.Controllers
 {
+    [Authorize]
     public class BlogPanelController : Controller
     {
         private IPostRepository _PostRepository;

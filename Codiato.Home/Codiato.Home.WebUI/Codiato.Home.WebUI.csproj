@@ -116,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BlogPanelController.cs" />
@@ -645,6 +646,7 @@
     <Content Include="Scripts\codiblog.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Blog\Archive.aspx" />
     <Content Include="Views\Blog\Index.aspx" />
     <Content Include="Views\Blog\SinglePost.ascx" />
