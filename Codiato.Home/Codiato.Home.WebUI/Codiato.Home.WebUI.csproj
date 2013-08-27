@@ -627,6 +627,7 @@
     <Content Include="Content\bootstrap-assets\Makefile" />
     <Content Include="Content\bootstrap-assets\package.json" />
     <Content Include="Content\bootstrap-assets\README.md" />
+    <None Include="Properties\PublishProfiles\CodiXCopy.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\bootstrap-affix.js" />
     <Content Include="Scripts\bootstrap-alert.js" />
