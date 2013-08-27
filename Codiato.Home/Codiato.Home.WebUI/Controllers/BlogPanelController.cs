@@ -57,6 +57,50 @@ namespace Codiato.Home.WebUI.Controllers
             return View("Poster");
         }
 
+        [HttpPost]
+        public ActionResult EditPost(long id)
+        {
+            Post p = _PostRepository.Find(id);
+            if (p == null)
+                return HttpNotFound();
+
+            return View("Poster", p);
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult EditPost(long id, string title, string body, string tags, string link)
+        {
+            Post p = _PostRepository.Find(id);
+            if (p == null)
+                return HttpNotFound();
+            p.Title = title;
+            p.Content = body;
+            p.PublishDate = DateTime.UtcNow;
+            p.StaticLink = link;
+
+            string[] newTagNames=tags.Split(',');
+            IQueryable<Tag> removeTags = p.Tags.Where(x=>newTagNames.Count(y=>y == x.TagName)==0).AsQueryable();
+            string[] addTags = newTagNames.Where(x=>p.Tags.Count(y=>y.TagName == x) == 0).ToArray();
+
+            foreach (var tag in removeTags.ToList())
+            {
+                p.Tags.Remove(tag);
+            }
+            foreach (var tag in addTags)
+            {
+                Tag t = _TagRepository.Find(tag);
+                if (t == null)
+                    t = new Tag { TagName = tag };
+
+                p.Tags.Add(t);
+            }
+
+            _PostRepository.Save();
+
+            return View("Poster", p);
+        }
+        
         [HttpPost]        
         public ActionResult DeletePost(long id)
         {
