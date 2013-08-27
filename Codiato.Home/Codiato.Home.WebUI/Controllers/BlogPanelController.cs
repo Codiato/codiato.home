@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Codiato.Home.WebUI.Controllers
 {
@@ -42,6 +43,7 @@ namespace Codiato.Home.WebUI.Controllers
             p.PublishDate = DateTime.UtcNow;
             p.StaticLink = link;
             p.Tags = new List<Tag>();
+            p.Writer = Membership.GetUser().UserName;
 
             foreach (var tag in tags.Split(','))
             {                

@@ -12,14 +12,7 @@ using System.Web.Security;
 namespace Codiato.Home.WebUI.Controllers
 {
     public class AccountController : Controller
-    {
-        public ActionResult CreateUsername(string username, string password, string email)
-        {
-            Membership.CreateUser(username, password, email);
-
-            return Content("Is in place");
-        }
-
+    {        
         public ActionResult LogIn()
         {
             return View();
