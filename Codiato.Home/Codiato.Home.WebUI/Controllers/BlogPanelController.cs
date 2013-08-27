@@ -33,20 +33,20 @@ namespace Codiato.Home.WebUI.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult CreatePost(string title, string body, string tags, string link)
+        public ActionResult CreatePost(string title, string content, string tags, string link)
         {
             Post p = new Post();
             p.Title = title;
-            p.Content = body;
+            p.Content = content;
             p.PublishDate = DateTime.UtcNow;
             p.StaticLink = link;
             p.Tags = new List<Tag>();
 
             foreach (var tag in tags.Split(','))
-            {
-                Tag t = _TagRepository.Find(tag);
+            {                
+                Tag t = _TagRepository.Find(tag.Trim());
                 if (t == null)
-                    t = new Tag { TagName = tag };
+                    t = new Tag { TagName = tag.Trim() };
 
                 p.Tags.Add(t);
             }
@@ -56,8 +56,7 @@ namespace Codiato.Home.WebUI.Controllers
 
             return View("Poster");
         }
-
-        [HttpPost]
+        
         public ActionResult EditPost(long id)
         {
             Post p = _PostRepository.Find(id);
@@ -69,13 +68,13 @@ namespace Codiato.Home.WebUI.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult EditPost(long id, string title, string body, string tags, string link)
+        public ActionResult EditPost(long id, string title, string content, string tags, string link)
         {
             Post p = _PostRepository.Find(id);
             if (p == null)
                 return HttpNotFound();
             p.Title = title;
-            p.Content = body;
+            p.Content = content;
             p.PublishDate = DateTime.UtcNow;
             p.StaticLink = link;
 
@@ -89,9 +88,9 @@ namespace Codiato.Home.WebUI.Controllers
             }
             foreach (var tag in addTags)
             {
-                Tag t = _TagRepository.Find(tag);
+                Tag t = _TagRepository.Find(tag.Trim());
                 if (t == null)
-                    t = new Tag { TagName = tag };
+                    t = new Tag { TagName = tag.Trim() };
 
                 p.Tags.Add(t);
             }

@@ -13,21 +13,20 @@
             $('a').click(function (e) {
                 e.preventDefault();
                 var ckEditorNum = parseInt($('#CKEditorFuncNum').val());
-                window.opener.CKEDITOR.tools.callFunction(ckEditorNum, '/uploads/' + $(this).attr('href'), '');
+                window.opener.CKEDITOR.tools.callFunction(ckEditorNum, '/content/uploads/' + $(this).attr('href'), '');
                 window.close();
             });
         });
     </script>
 </head>
 <body>
-    <div>
-        Select files<br /><br />
+    <div>        
         <%foreach (var item in Model.Files)
         {%>
-            <a href="@item.FileName" style="font-size: larger;"><%:item.FileName%></a>
-            <br />
-        <%} %>
-        <br /><br />
+            <div style="border-radius: 5px; background: #dedede; margin: 5px; padding: 5px;">
+                <img width="50px" src="<%: Url.Content(string.Format("/content/uploads/{0}", item.FileName)) %>" alt="<%: item.FileName %>" /><a href="<%:item.FileName%>" style="font-size: larger;"><%:item.FileName%></a>
+            </div>
+        <%} %>        
         <%:Html.HiddenFor(m => m.CKEditorFuncNum) %>
     </div>
 </body>

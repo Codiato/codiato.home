@@ -10,9 +10,10 @@
         </div>
         <div class="post-content">
             <%= Model.Content %>
-        </div>
+            <div class="clearfix"></div>
+        </div>        
         <div class="post-footer">
-            <%--<span class="comment-box"><a href="#">Leave a comment</a></span>--%><span class="tag-box">Tags: <%: string.Join(",", Model.Tags.Select(t => t.TagName).ToArray()) %></span>
+            <%--<span class="comment-box"><a href="#">Leave a comment</a></span>--%><span class="tag-box">Tags: <%: Model.CSedTags %></span>
         </div>
     </div>
 </article>

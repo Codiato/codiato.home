@@ -22,6 +22,12 @@ namespace Codiato.Home.WebUI
             );
 
             routes.MapRoute(
+                name: "Editor",
+                url: "a/edit/{id}",
+                defaults: new { controller = "BlogPanel", action = "EditPost" }
+            );
+
+            routes.MapRoute(
                 name: "Deleter",
                 url: "a/delete/{id}",
                 defaults: new { controller = "BlogPanel", action = "DeletePost" }
