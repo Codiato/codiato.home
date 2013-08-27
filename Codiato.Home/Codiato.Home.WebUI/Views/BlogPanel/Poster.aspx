@@ -8,7 +8,7 @@
 
     <h2>پست کننده</h2>
 
-    <% using (Html.BeginForm("CreatePost", "Panel")) { %>
+    <% using (Html.BeginForm("CreatePost", "BlogPanel")) { %>
         <fieldset>
             <legend>مشخصات پست جدید بلاگ</legend>
         <label>عنوان</label>

@@ -11,7 +11,7 @@ namespace Codiato.Home.WebUI.Models
         [Key]        
         public string TagName { get; set; }
 
-        public List<Post> Posts { get; set; }
+        public virtual List<Post> Posts { get; set; }
 
         public Tag()
         {}

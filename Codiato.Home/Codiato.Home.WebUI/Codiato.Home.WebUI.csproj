@@ -518,6 +518,7 @@
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\styles.js" />
     <Content Include="Content\images\cal.png" />
+    <Content Include="Content\images\codiato-block-gray.jpg" />
     <Content Include="Content\images\codiato-block.jpg" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
@@ -645,7 +646,7 @@
     <Content Include="Views\Blog\Archive.aspx" />
     <Content Include="Views\Blog\Index.aspx" />
     <Content Include="Views\Blog\SinglePost.ascx" />
-    <Content Include="Views\Panel\Poster.aspx" />
+    <Content Include="Views\BlogPanel\Poster.aspx" />
     <Content Include="Views\Shared\Browse.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

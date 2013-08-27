@@ -16,7 +16,7 @@ namespace Codiato.Home.WebUI.Models
         public string StaticLink { get; set; }
         public string Writer { get; set; }
         
-        public List<Tag> Tags { get; set; }
+        public virtual List<Tag> Tags { get; set; }
 
         public Post()
         {}

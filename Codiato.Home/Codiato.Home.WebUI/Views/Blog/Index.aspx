@@ -6,8 +6,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<% foreach (Codiato.Home.WebUI.Models.Post post in Model) { %>
-    <% Html.RenderPartial("SinglePost", post); %>
-<%} %>
+    <section>
+        <% foreach (Codiato.Home.WebUI.Models.Post post in Model) { %>
+            <% Html.RenderPartial("SinglePost", post); %>
+        <%} %>
+    </section>
 
 </asp:Content>

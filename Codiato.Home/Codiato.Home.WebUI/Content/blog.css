@@ -1,1 +1,109 @@
-﻿
+﻿body
+{
+    background: url(images/pattern1.jpg) #b5b5b5;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+div.blog-post {
+    background: url('images/codiato-block.jpg') top left no-repeat;
+    margin-bottom: 15px;
+}
+
+div.blog-post h2
+{
+    padding-left: 40px;    
+    padding-top: 25px;
+}
+
+div.blog-post h2 a
+{
+    color: #58595B;
+}
+
+div.blog-post h2 a:hover
+{
+    color: #790000;
+    text-decoration: none;
+}
+
+div.blog-post div.post-content
+{
+    background: #dfdfdf;
+    min-height: 200px;
+    margin-left: 32px;
+    margin-top: -28px;
+    padding: 10px;
+    padding-top: 44px;
+    padding-left: 55px;
+    padding-bottom: 44px;
+}
+
+div.blog-post div.post-date
+{
+    background: url(images/cal.png) no-repeat #e9e9e9;
+    width: 77px;
+    height: 86px;
+    float: left; 
+    position: relative;
+    font-weight: bold;   
+    margin-right: 3px;
+    margin-top: 20px;
+}
+
+div.blog-post div.post-date span.date-month, div.blog-post div.post-date span.date-day, div.blog-post div.post-date span.date-year
+{
+    position: absolute;
+    color: #58595b;
+}
+
+div.blog-post div.post-date span.date-month
+{
+    color: #e9e9e9;
+    font-size: 10pt;
+    left: 27px;
+    top: 2px;
+}
+
+div.blog-post div.post-date span.date-day
+{
+    font-size: 32pt;
+    top: 44px;
+    left: 14px;
+}
+
+div.blog-post div.post-date span.date-year {
+    bottom: 0px;
+    left: 4px;
+    font-size: 8pt;
+}
+
+div.blog-post div.post-footer {
+    background: url('images/codiato-block-gray.jpg') top right no-repeat;
+    height: 91px;
+    width: 973px;
+    margin-top: -44px;    
+}
+
+div.blog-post div.post-footer span.tag-box, div.blog-post div.post-footer span.comment-box{    
+    padding-left: 50px;
+}
+
+div.blog-post div.post-footer span.tag-box{
+    font-style: italic;
+    color: #0f99c1;
+}
