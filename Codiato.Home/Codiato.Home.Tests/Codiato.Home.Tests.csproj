@@ -68,6 +68,7 @@
     <Compile Include="Controllers\BlogControllerTests\ArchiveTests.cs" />
     <Compile Include="Controllers\BlogControllerTests\IndexTests.cs" />
     <Compile Include="Controllers\BlogPanelControllerTests\CreatePostTests.cs" />
+    <Compile Include="Controllers\BlogPanelControllerTests\FakePostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

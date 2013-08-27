@@ -22,4 +22,7 @@ namespace Codiato.Home.WebUI.Models.Repositories
         Post LatestPost();
         IQueryable<Post> RecentPosts(int count);
     }
+
+    public interface ITagRepository : IRepository<Tag, string>
+    {}
 }

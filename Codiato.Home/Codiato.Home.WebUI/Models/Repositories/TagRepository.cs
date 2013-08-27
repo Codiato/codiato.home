@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Codiato.Home.WebUI.Models.Repositories
 {
-    public class TagRepository : IRepository<Tag, string>
+    public class TagRepository : ITagRepository
     {
         private HomeContext _db = HomeContext.Current;
         #region Singleton

@@ -17,5 +17,18 @@ namespace Codiato.Home.WebUI.Models
         public string Writer { get; set; }
         
         public List<Tag> Tags { get; set; }
+
+        public Post()
+        {}
+
+        public Post(string title, string content, 
+            string staticLink, string writer, DateTime publishDate)
+        {
+            Title = title;
+            Content = content;
+            PublishDate = publishDate;
+            StaticLink = staticLink;
+            Writer = writer;
+        }
     }
 }

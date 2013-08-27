@@ -24,5 +24,10 @@ namespace Codiato.Home.Tests.Controllers.BlogPanelControllerTests
             Assert.AreEqual(result.ViewName, "Poster");
         }
 
+        [TestMethod]
+        public void Saves_Correct_Values_CreatePost_BlogPanel()
+        {
+
+        }
     }
 }

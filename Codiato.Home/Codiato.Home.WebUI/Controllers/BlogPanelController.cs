@@ -11,6 +11,21 @@ namespace Codiato.Home.WebUI.Controllers
 {
     public class BlogPanelController : Controller
     {
+        private IPostRepository _PostRepository;
+        private ITagRepository _TagRepository;
+
+        public BlogPanelController()
+        {
+            _PostRepository = PostRepository.Current;
+            _TagRepository = TagRepository.Current;
+        }
+
+        public BlogPanelController(IPostRepository postRepository, ITagRepository tagRepository)
+        {
+            _PostRepository = postRepository;
+            _TagRepository = tagRepository;
+        }
+
         public ActionResult CreatePost()
         {
             return View("Poster");
@@ -29,15 +44,15 @@ namespace Codiato.Home.WebUI.Controllers
 
             foreach (var tag in tags.Split(','))
             {
-                Tag t = TagRepository.Current.Find(tag);
+                Tag t = _TagRepository.Find(tag);
                 if (t == null)
                     t = new Tag { TagName = tag };
 
                 p.Tags.Add(t);
             }
 
-            PostRepository.Current.Add(p);
-            PostRepository.Current.Save();
+            _PostRepository.Add(p);
+            _PostRepository.Save();
 
             return View("Poster");
         }
@@ -45,12 +60,12 @@ namespace Codiato.Home.WebUI.Controllers
         [HttpPost]        
         public ActionResult DeletePost(long id)
         {
-            Post p = PostRepository.Current.Find(id);
+            Post p = _PostRepository.Find(id);
             if (p == null)
                 return HttpNotFound();
 
-            PostRepository.Current.Delete(p);
-            PostRepository.Current.Save();
+            _PostRepository.Delete(p);
+            _PostRepository.Save();
 
             return Content("Done O.O");
         }
