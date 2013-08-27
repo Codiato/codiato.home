@@ -27,8 +27,14 @@ namespace Codiato.Home.Tests.Controllers.BlogPanelControllerTests
                 new Post("fan roosh", "content k", "#", "F", DateTime.UtcNow.AddDays(-1))
             }).AsQueryable();
             postRepository = MockRepository.GenerateStub<IPostRepository>();
+
             postRepository.Stub(x => x.RecentPosts(Arg<int>.Is.Anything))
                 .WhenCalled(x => x.ReturnValue = posts.Where(y => y.PublishDate <= DateTime.UtcNow).Take((int)x.Arguments[0]));
+        }
+
+        internal static IPostRepository Instance()
+        {
+            return postRepository;
         }
     }
 }
